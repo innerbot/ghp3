@@ -7,9 +7,8 @@ use GuzzleHttp\Exception\TransferException;
 
 class GithubSearch
 {
-    protected $api_endpoint = "https://api.github.com/search";
+    protected $api_endpoint = "https://api.github.com/search/";
     protected $client;
-    protected $valid_params = ["q","sort","order"];
 
     public function __construct()
     {
@@ -18,23 +17,28 @@ class GithubSearch
         ]);
     }
 
-    public function search($search_in, Array $params)
+    public function search($search_in, Array $params = array())
     {
         try {
-            return $this->client->get( $search_in, [
-                'query' => $params
-            ]);
+            if(!empty($params)) {
+                return $this->client->request( 'GET', $search_in, [
+                    'headers' => ['User-Agent' => 'innerbot/ghp3'],
+                    'query' => $params
+                ]);
+            } else {
+                return $this->client->request( 'GET', $search_in );
+            }
         }
 
-        catch(TransferException $e)
+        catch(Exception $e)
         {
-
+            abort(500, $e->getMessage() );
         }
     }
 
-    public function searchRepos(Array $params)
+    public function searchRepos($params)
     {
-        return $this->search('repositories', $params);
+        return $this->search('repositories?' . $params);
     }
 
 }
