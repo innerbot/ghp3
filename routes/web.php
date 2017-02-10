@@ -11,6 +11,13 @@
 |
 */
 
+$app->get('/load-more/{skip}', function ($skip) use ($app) {
+    // TODO collect next NN results skipping the first $skip records
+    // $projects = Project::find()->orderBy()->
+    // return response()->json($projects);
+});
+
 $app->get('/', function () use ($app) {
-    return $app->version();
+    // $projects = Project::
+    // return view('layout', compact('projects'));
 });
