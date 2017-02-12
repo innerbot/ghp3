@@ -48,14 +48,13 @@ class GithubSeedDatabase extends Command
     public function handle()
     {
 
-        $search_parameters = 'q=language:php&sort=stars&order=desc';
-        $search_params_array = [
+        $search_params = [
             'q' => "language:php",
             'sort' => 'stars',
             'order' => 'desc'
         ];
 
-        $response = $this->api->search('repositories', $search_params_array);
+        $response = $this->api->search('repositories', $search_params);
 
 
     }
