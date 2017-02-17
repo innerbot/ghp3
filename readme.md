@@ -1,21 +1,23 @@
-# Lumen PHP Framework
+# GHP3 - Github's (Most) Popular PHP Projects
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+This project is a demo of [Laravel Lumen](https://lumen.laravel.com) and the GitHub API via a Laravel Service Provider "Bridge."
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+Once set up, it allows the end-user to view the most popular public PHP Projects hosted by GitHub ranked by the number of "Stars" each Project Has.
 
-## Official Documentation
+### Requirements
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+You must have PHP version 5.6.4 or newer.
 
-## Security Vulnerabilities
+This project also relies on Composer to install various packages. If you do not have composer installed on your system
+you will need to do so by visiting https://getcomposer.org/download.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+### Installation
 
-## License
+Clone or download this repository to your local machine.
 
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Open a terminal and navigate to the root folder of this repo on your machine.
+
+Run `composer install` to download the project dependencies.
+
+When this process completes, you 
+

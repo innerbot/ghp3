@@ -33,7 +33,7 @@ class GithubPopularPhpProjects extends Seeder
             $project_fields = array(
                 'repository_id' => $repo['id'],
                 'name' => $repo['name'],
-                'url' => $repo['url'],
+                'url' => $repo['html_url'],
                 'description' => $repo['description'],
                 'stars' => $repo['stargazers_count'],
                 'project_created' => $repo['created_at'],

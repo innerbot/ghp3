@@ -1,5 +1,7 @@
 <?php
 
+use App\Project;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,13 +13,14 @@
 |
 */
 
-$app->get('/load-more/{skip}', function ($skip) use ($app) {
-    // TODO collect next NN results skipping the first $skip records
-    // $projects = Project::find()->orderBy()->
-    // return response()->json($projects);
-});
+$app->get('/', [ 'as' => 'home', function (Illuminate\Http\Request $request) {
+    $projects = Project::orderBy('stars','desc')
+                            ->paginate(25);
+    return view('home', compact('projects', 'request'));
+}]);
 
-$app->get('/', function () use ($app) {
-    // $projects = Project::
-    // return view('layout', compact('projects'));
-});
+$app->get('project/{id}', ['as'=>'project', function($id) {
+    $project = Project::find($id);
+    $title = title_case($project->name);
+    return view('project.detail', compact('title', 'project'));
+}]);
