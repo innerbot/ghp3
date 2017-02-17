@@ -1,6 +1,6 @@
 # GHP3 - Github's (Most) Popular PHP Projects
 
-This project is a demo of [Laravel Lumen](https://lumen.laravel.com) and the GitHub API via a Laravel Service Provider "Bridge."
+This project is a demo of [Laravel Lumen](https://lumen.laravel.com) and the GitHub API.
 
 Once set up, it allows the end-user to view the most popular public PHP Projects hosted by GitHub ranked by the number of "Stars" each Project Has.
 
@@ -19,5 +19,5 @@ Open a terminal and navigate to the root folder of this repo on your machine.
 
 Run `composer install` to download the project dependencies.
 
-When this process completes, you 
+When this process completes, you'll need to create a .env file at the top-level of your project. This file provides configuration details to the Lumen application. We've included an example .env file for you in the project root folder: `.env.example`.
 
