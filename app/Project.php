@@ -16,7 +16,7 @@ class Project extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'email',
+        'repository_id', 'name', 'description', 'url', 'stars', 'project_created', 'project_last_push'
     ];
 
 }
